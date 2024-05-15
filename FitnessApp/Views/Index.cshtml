@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Profil";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- Adjust the path as per your project structure -->
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Acasa</a>
+            <a href="antrenamente.html">Antrenamente</a>
+            <a href="nutritie.html">Nutritie</a>
+            <a href="exercitii.html">Exercitii</a>
+            <a href="timer.html">Timer</a>
+            <a href="istoric.html">Istoric</a>
+            <a href="masuratori.html">Masuratori</a>
+            <a href="contact.html">Contact</a>
+            <!-- Other navigation links -->
+        </div>
+        <div class="profil">
+            <span>Nume Utilizator</span>
+            <span>Nume@mail.com</span>
+            <a href="profil.html">Profil</a>
+        </div>
+    </header>
+    <main>
+        <div class="profil">
+            <h1>Profil</h1>
+            <label for="name">Nume</label>
+            <br>
+            <input type="text" id="name" placeholder="Add Text">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Add Text">
+            <br>
+            <label for="gen">Gen</label>
+            <br>
+            <input type="text" id="gen" placeholder="Add Text">
+        </div>
+    </main>
+</body>
+</html>

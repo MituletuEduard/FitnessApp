@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iQmTLmgupZU+JY4W+Yz5HpwZBXYAHZLNvcmjNLt7TXsSdZ03vi6xl6SLr5x4w2VjxRrpt3Nv8jhWCGUGTslf6A==",
+  "dgSpecHash": "FEiNZ9uIJ7nBaOK9flZmHfWqlUVTvZpfcPW3pGpPkDgspyKbHfYSyq9Q6FkYFR0G07XrmGmNl+MKFtqi1r/VpQ==",
   "success": true,
-  "projectFilePath": "C:\\Anul 3\\sem2\\PAW\\FitnessApp\\FitnessApp\\FitnessApp.csproj",
+  "projectFilePath": "C:\\Anul 3\\sem2\\PAW\\gitFitnessApp\\FitnessApp\\FitnessApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mitul\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\mitul\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

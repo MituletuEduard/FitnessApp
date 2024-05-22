@@ -18,6 +18,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 // Register the custom logging service
 builder.Services.AddSingleton<ILog, MyConsoleLogger>();
 
+// Register repositories and services
+builder.Services.AddScoped<IMasuratoriRepository, MasuratoriRepository>();
+builder.Services.AddScoped<IMasuratoriService, MasuratoriService>();
+
 // Configure Facebook authentication
 builder.Services.AddAuthentication(options =>
 {
@@ -43,6 +47,7 @@ app.UseAuthentication();  // Ensure authentication middleware is used
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapControllers(); // Add this line to map controllers
 
 app.MapControllerRoute(
     name: "default",

@@ -8604,11 +8604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Anul 3\\sem2\\PAW\\gitFitnessApp\\FitnessApp\\FitnessApp.csproj",
+      "projectUniqueName": "C:\\Anul 3\\sem2\\PAW\\FitnessApp_v3\\FitnessApp\\FitnessApp.csproj",
       "projectName": "FitnessApp",
-      "projectPath": "C:\\Anul 3\\sem2\\PAW\\gitFitnessApp\\FitnessApp\\FitnessApp.csproj",
+      "projectPath": "C:\\Anul 3\\sem2\\PAW\\FitnessApp_v3\\FitnessApp\\FitnessApp.csproj",
       "packagesPath": "C:\\Users\\mitul\\.nuget\\packages\\",
-      "outputPath": "C:\\Anul 3\\sem2\\PAW\\gitFitnessApp\\FitnessApp\\obj\\",
+      "outputPath": "C:\\Anul 3\\sem2\\PAW\\FitnessApp_v3\\FitnessApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mitul\\AppData\\Roaming\\NuGet\\NuGet.Config",

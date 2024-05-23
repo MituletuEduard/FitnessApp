@@ -1,12 +1,18 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using FitnessApp.Services;  // Adjust the namespace as necessary
+using FitnessApp.Services;
+using FitnessApp.Models;
+using FitnessApp.Services.Timer;  // Adjust the namespace as necessary
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<ITimerRepository, TimerRepository>();
+builder.Services.AddScoped<ITimerService, TimerService>();
+
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("FitnessDb")));

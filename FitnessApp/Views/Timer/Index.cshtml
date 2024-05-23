@@ -1,0 +1,66 @@
+﻿@model FitnessApp.Models.Timer
+
+@{
+    ViewData["Title"] = "Timer";
+}
+
+<div id="timer-container">
+    <div id="timer">00:00:00</div>
+    <div id="controls">
+        <label for="hours">Hours: </label>
+        <input type="number" id="hours" value="0" min="0" max="99">
+        <label for="minutes">Minutes: </label>
+        <input type="number" id="minutes" value="0" min="0" max="59">
+        <label for="seconds">Seconds: </label>
+        <input type="number" id="seconds" value="0" min="0" max="59">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+    </div>
+</div>
+
+<script>
+    let timerInterval;
+    let totalSeconds = 0;
+
+    function startTimer() {
+        const hours = parseInt(document.getElementById("hours").value);
+        const minutes = parseInt(document.getElementById("minutes").value);
+        const seconds = parseInt(document.getElementById("seconds").value);
+
+        totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+        updateTimerDisplay();
+
+        if (timerInterval) {
+            clearInterval(timerInterval);
+        }
+
+        timerInterval = setInterval(updateTimer, 1000); // 1000 ms = 1 second
+    }
+
+    function updateTimer() {
+        if (totalSeconds <= 0) {
+            clearInterval(timerInterval);
+            alert("Timer finished!");
+            return;
+        }
+
+        totalSeconds--;
+        updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        const formattedHours = hours < 10 ? "0" + hours : hours;
+        const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("timer").textContent = formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+    }
+</script>
